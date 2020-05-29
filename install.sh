@@ -1,12 +1,10 @@
 #/bin/bash
 
 echo "Downloading the file"
-curl http://www.statios.com/software/gslib90_le_x64.tar.gz --output ~/Downloads/gslib.tar.gz
+curl -o $HOME/Downloads/gslib.tar.gz http://www.statios.com/software/gslib90_le_x64.tar.gz
 
 echo "Unpacking"
-mkdir ~/GSLib
-tar -xf ~/Downloads/gslib.tar.gz -C ~/GSLib
-chmod +x ~/GSLib/*
-echo "export PATH=$PATH:~/GSLib" >> ~/.bash_profile
-source ~/.bash_profile
-
+mkdir $HOME/GSLib
+tar -xf $HOME/Downloads/gslib.tar.gz -C $HOME/GSLib
+chmod +x $HOME/GSLib/*
+echo "export PATH=$PATH:$HOME/GSLib" >> $HOME/.bash_profile
