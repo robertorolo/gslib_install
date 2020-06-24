@@ -8,3 +8,5 @@ mkdir $HOME/GSLib
 tar -xf $HOME/Downloads/gslib.tar.gz -C $HOME/GSLib
 chmod +x $HOME/GSLib/*
 echo "export PATH=$PATH:$HOME/GSLib" >> $HOME/.bash_profile
+source $HOME/.bash_profile
+echo "Done!"
